@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import ReactFlow, { removeElements, addEdge, MiniMap, isNode, Controls, Background } from 'react-flow-renderer';
 import { getElements } from './utils';
@@ -32,6 +32,10 @@ const StressFlow = () => {
       });
     });
   };
+
+  useEffect(() => {
+    return () => setElements([]);
+  }, []);
 
   return (
     <ReactFlow elements={elements} onLoad={onLoad} onElementsRemove={onElementsRemove} onConnect={onConnect}>

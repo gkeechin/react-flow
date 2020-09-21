@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import ReactFlow, { addEdge, Handle } from 'react-flow-renderer';
 
@@ -37,12 +37,16 @@ const nodeTypes = {
   customnode: CustomNode,
 };
 
-const HorizontalFlow = () => {
+const ValidationFlow = () => {
   const [elements, setElements] = useState(initialElements);
   const onConnect = (params) => {
     console.log('on connect', params);
     setElements((els) => addEdge(params, els));
   };
+
+  useEffect(() => {
+    return () => setElements([]);
+  }, []);
 
   return (
     <ReactFlow
@@ -59,4 +63,4 @@ const HorizontalFlow = () => {
   );
 };
 
-export default HorizontalFlow;
+export default ValidationFlow;

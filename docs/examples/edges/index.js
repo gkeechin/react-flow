@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import ReactFlow, { removeElements, addEdge, MiniMap, Controls, Background } from 'react-flow-renderer';
 
 import CustomEdge from './CustomEdge';
@@ -55,6 +54,10 @@ const EdgesFlow = () => {
 
   const onElementsRemove = (elementsToRemove) => setElements((els) => removeElements(elementsToRemove, els));
   const onConnect = (params) => setElements((els) => addEdge(params, els));
+
+  useEffect(() => {
+    return () => setElements([]);
+  }, []);
 
   return (
     <ReactFlow

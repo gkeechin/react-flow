@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import ReactFlow, { removeElements, addEdge, MiniMap, Controls, Background, isNode } from 'react-flow-renderer';
 
@@ -118,6 +118,10 @@ const OverviewFlow = () => {
   const [elements, setElements] = useState(initialElements);
   const onElementsRemove = (elementsToRemove) => setElements((els) => removeElements(elementsToRemove, els));
   const onConnect = (params) => setElements((els) => addEdge(params, els));
+
+  useEffect(() => {
+    return () => setElements([]);
+  });
 
   return (
     <ReactFlow

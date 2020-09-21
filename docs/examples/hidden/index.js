@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import ReactFlow, { addEdge, MiniMap, Controls } from 'react-flow-renderer';
-import { useEffect } from 'react';
 
 const initialElements = [
   { id: '1', type: 'input', data: { label: 'Node 1' }, position: { x: 250, y: 5 } },
@@ -26,6 +24,10 @@ const HiddenFlow = () => {
       })
     );
   }, [isHidden]);
+
+  useEffect(() => {
+    return () => setElements([]);
+  }, []);
 
   return (
     <ReactFlow elements={elements} onConnect={onConnect}>

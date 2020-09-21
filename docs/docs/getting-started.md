@@ -3,6 +3,8 @@ id: getting-started
 title: Getting started
 ---
 
+Before you can start to use React Flow you need to install `react-flow-renderer` from npm:
+
 ## Installation
 
 ```
@@ -11,9 +13,9 @@ npm install react-flow-renderer
 
 ## Usage
 
-This is a very basic example of how to use React Flow. There are more advanced examples in the [example](/example/src) folder.
+This is a very basic example of how to use React Flow. We are rendering two nodes connected with an edge. There are more advanced examples in the [examples](/examples) section.
 
-```javascript
+```jsx
 import React from 'react';
 import ReactFlow from 'react-flow-renderer';
 
@@ -25,4 +27,27 @@ const elements = [
 ];
 
 const BasicFlow = () => <ReactFlow elements={elements} />;
+```
+
+```jsx live
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+  useEffect(() => {
+    var timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h2>It is {date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
 ```

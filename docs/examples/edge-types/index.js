@@ -1,9 +1,9 @@
 /**
  * Example for checking the different edge types and source and target positions
  */
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import ReactFlow, { removeElements, addEdge, MiniMap, Controls, Background } from 'react-flow-renderer';
+
 import { getElements } from './utils';
 
 const onLoad = (reactFlowInstance) => {
@@ -17,6 +17,10 @@ const EdgeTypesFlow = () => {
   const [elements, setElements] = useState(initialElements);
   const onElementsRemove = (elementsToRemove) => setElements((els) => removeElements(elementsToRemove, els));
   const onConnect = (params) => setElements((els) => addEdge(params, els));
+
+  useEffect(() => {
+    return () => setElements([]);
+  }, []);
 
   return (
     <ReactFlow

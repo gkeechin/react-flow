@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import ReactFlow, { removeElements, addEdge } from 'react-flow-renderer';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
@@ -53,6 +52,10 @@ const HorizontalFlow = () => {
       })
     );
   };
+
+  useEffect(() => {
+    return () => setElements([]);
+  }, []);
 
   return (
     <ReactFlow

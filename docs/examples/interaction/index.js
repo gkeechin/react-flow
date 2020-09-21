@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import ReactFlow, { addEdge, MiniMap, Controls } from 'react-flow-renderer';
 
 const initialElements = [
@@ -31,6 +30,10 @@ const InteractionFlow = () => {
   const [captureZoomClick, setCaptureZoomClick] = useState(false);
   const [captureZoomScroll, setCaptureZoomScroll] = useState(false);
   const [captureElementClick, setCaptureElementClick] = useState(false);
+
+  useEffect(() => {
+    return () => setElements([]);
+  }, []);
 
   return (
     <ReactFlow

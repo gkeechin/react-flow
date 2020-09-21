@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactFlow, { ReactFlowProvider, addEdge, removeElements, Controls } from 'react-flow-renderer';
 
 import Sidebar from './Sidebar';
@@ -21,6 +21,10 @@ const ProviderFlow = () => {
   const [elements, setElements] = useState(initialElements);
   const onConnect = (params) => setElements((els) => addEdge(params, els));
   const onElementsRemove = (elementsToRemove) => setElements((els) => removeElements(elementsToRemove, els));
+
+  useEffect(() => {
+    return () => setElements([]);
+  }, []);
 
   return (
     <div className="providerflow">
