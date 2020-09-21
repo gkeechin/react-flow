@@ -5,7 +5,16 @@ title: Nodes
 
 There are three different [node types](#node-types--custom-nodes) (`default`, `input`, `output`) you can use. The node types differ in the number and types of handles. An input node has only a source handle, a default node has a source and a target and an output node has only a target handle. You create nodes by adding them to the `elements` array of the `ReactFlow` component.
 
-Node example: `{ id: '1', type: 'input', data: { label: 'Node 1' }, position: { x: 250, y: 5 } }`
+Node example:
+
+```js
+{
+  id: '1',
+  type: 'input',
+  data: { label: 'Node 1' },
+  position: { x: 250, y: 5 }
+}
+```
 
 ## Options
 
@@ -26,7 +35,7 @@ Node example: `{ id: '1', type: 'input', data: { label: 'Node 1' }, position: { 
 
 The standard node types are `input`, `default` and `output`. The default node types object looks like this:
 
-```javascript
+```js
 {
   input: InputNode,
   default: DefaultNode,
@@ -37,7 +46,7 @@ The standard node types are `input`, `default` and `output`. The default node ty
 The keys represent the type names and the values are the components that get rendered.
 If you want to introduce a new type you can pass a `nodeTypes` object to the `ReactFlow` component:
 
-```javascript
+```js
 nodeTypes={{
   special: MyCustomNode
 }}

@@ -1,13 +1,14 @@
 ---
 id: getting-started
 title: Getting started
+slug: /getting-started
 ---
 
 Before you can start to use React Flow you need to install `react-flow-renderer` from npm:
 
 ## Installation
 
-```
+```bash
 npm install react-flow-renderer
 ```
 
@@ -29,25 +30,6 @@ const elements = [
 const BasicFlow = () => <ReactFlow elements={elements} />;
 ```
 
-```jsx live
-function Clock(props) {
-  const [date, setDate] = useState(new Date());
-  useEffect(() => {
-    var timerID = setInterval(() => tick(), 1000);
+import Flow from './index';
 
-    return function cleanup() {
-      clearInterval(timerID);
-    };
-  });
-
-  function tick() {
-    setDate(new Date());
-  }
-
-  return (
-    <div>
-      <h2>It is {date.toLocaleTimeString()}.</h2>
-    </div>
-  );
-}
-```
+<Flow />

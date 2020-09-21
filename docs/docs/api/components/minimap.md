@@ -7,7 +7,7 @@ You can use the mini map plugin by passing it as a children to the `ReactFlow` c
 
 ### Usage
 
-```javascript
+```jsx
 import ReactFlow, { MiniMap } from 'react-flow-renderer';
 
 const FlowWithMiniMap = () => (

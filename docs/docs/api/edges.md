@@ -6,7 +6,18 @@ title: Edges
 
 React Flow comes with four [edge types](#edge-types--custom-edges) (`default`, `straight`, `step`, `smoothstep`). As the names indicate, the edges differ in the representation. The default type is a bezier edge. You create edges by adding them to your `elements` array of the `ReactFlow` component.
 
-Edge example: `{ id: 'e1-2', type: 'straight', source: '1', target: '2', animated: true, label: 'edge label' }`
+Edge example:
+
+```js
+{
+  id: 'e1-2',
+  type: 'straight',
+  source: '1',
+  target: '2',
+  animated: true,
+  label: 'edge label'
+}
+```
 
 If you wanted to display this edge, you would need a node with id = 1 (source node) and another one with id = 2 (target node).
 

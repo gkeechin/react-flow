@@ -6,7 +6,9 @@ title: Internal State and Actions
 Under the hood React Flow uses [Easy Peasy](https://easy-peasy.now.sh/) for state handling.
 If you need to access the internal state you can use the `useStoreState` hook inside a child component of the `ReactFlow` component:
 
-```javascript
+### Internal state
+
+```jsx
 import ReactFlow, { useStoreState } from 'react-flow-renderer';
 
 const NodesDebugger = () => {
@@ -24,9 +26,11 @@ const Flow = () => (
 );
 ```
 
+### Internal actions
+
 You will not need this in most cases but you can also use the internal actions that are defined in the [store](/src/store/index.ts):
 
-```javascript
+```jsx
 import React, { useEffect } from 'react';
 import { useStoreActions } from 'react-flow-renderer'
 
@@ -35,7 +39,9 @@ const TransformUpdater = ({ x, y, zoom }) => {
 
   useEffect(() => {
     setTransform({ x, y, k: zoom })
-  }, [x, y, zoom])
+  }, [x, y, zoom]);
+
+  return null;
 });
 ```
 

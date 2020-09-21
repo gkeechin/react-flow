@@ -5,7 +5,7 @@ title: Provider
 
 If you need access to the internal state and action of React Flow outside of the `ReactFlow` component you can wrap it with the `ReactFlowProvider` component:
 
-```javascript
+```jsx
 import ReactFlow, { ReactFlowProvider } from 'react-flow-renderer';
 
 const FlowWithOwnProvider = () => (

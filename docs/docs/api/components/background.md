@@ -7,7 +7,7 @@ React Flow comes with two background variants: **dots** and **lines**. You can u
 
 ### Usage
 
-```javascript
+```jsx
 import ReactFlow, { Background } from 'react-flow-renderer';
 
 const FlowWithBackground = () => (

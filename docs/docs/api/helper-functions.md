@@ -9,43 +9,43 @@ If you want to remove a node or connect two nodes with each other you need to pa
 import ReactFlow, { isNode, isEdge, removeElements, addEdge } from 'react-flow-renderer';
 ```
 
-### isEdge
+### `isEdge`
 
 Returns `true` if the passed element is an edge.
 
 `isEdge = (element: Node | Edge): element is Edge`
 
-### isNode
+### `isNode`
 
 Returns `true` if the passed element is a node.
 
 `isNode = (element: Node | Edge): element is Node`
 
-### removeElements
+### `removeElements`
 
 Returns an array of elements without the ones from `elementsToRemove`. It also removes all incoming/outgoing edges if you just pass one or multiple nodes.
 
 `removeElements = (elementsToRemove: Elements, elements: Elements): Elements`
 
-### addEdge
+### `addEdge`
 
 Returns an array with elements with the added edge.
 
 `addEdge = (edgeParams: Edge, elements: Elements): Elements`
 
-### getOutgoers
+### `getOutgoers`
 
 Returns all direct child nodes of the passed node.
 
 `getOutgoers = (node: Node, elements: Elements): Node[]`
 
-### getIncomers
+### `getIncomers`
 
 Returns all direct incoming nodes of the passed node.
 
 `getIncomers = (node: Node, elements: Elements): Node[]`
 
-### getConnectedEdges
+### `getConnectedEdges`
 
 Returns all edges that are connected to the passed nodes.
 

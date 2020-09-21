@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'Highly customizable library for creating node based editors, diagrams and charts.',
   url: 'https://reactflow.dev',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'log',
   favicon: 'img/favicon.ico',
   organizationName: 'wbkd',
   projectName: 'react-flow-docs',
@@ -78,20 +78,20 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} React Flow. Built by webkid`,
     },
   },
-  // plugins: [
-  //   [
-  //     '@docusaurus/plugin-content-docs',
-  //     {
-  //       id: 'examples',
-  //       path: 'examples',
-  //       editUrl: 'https://github.com/wbkd/react-flow/edit/main/docs/',
-  //       routeBasePath: 'examples',
-  //       sidebarPath: require.resolve('./sidebarsExamples.js'),
-  //       showLastUpdateAuthor: false,
-  //       showLastUpdateTime: false,
-  //     },
-  //   ],
-  // ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'examples',
+        path: 'examples',
+        editUrl: 'https://github.com/wbkd/react-flow/edit/main/docs/',
+        routeBasePath: 'examples',
+        sidebarPath: require.resolve('./sidebarsExamples.js'),
+        showLastUpdateAuthor: false,
+        showLastUpdateTime: false,
+      },
+    ],
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -107,5 +107,4 @@ module.exports = {
       },
     ],
   ],
-  themes: ['@docusaurus/theme-live-codeblock'],
 };

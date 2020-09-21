@@ -54,8 +54,12 @@ The React Flow wrapper has the className `react-flow`. If you want to change the
 
 You could achieve the same effect by passing a style prop to the `ReactFlow` component:
 
-```javascript
-const style = { background: 'red', width: '100%' height: '300px' };
+```jsx
+const style = {
+  background: 'red',
+  width: '100%',
+  height: 300
+};
 
 const FlowWithRedBg = (
   <ReactFlow

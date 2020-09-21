@@ -4,7 +4,7 @@ module.exports = {
       type: 'doc',
       id: 'introduction',
     },
-    { type: 'doc', id: 'getting-started' },
+    { type: 'doc', id: 'getting-started/getting-started' },
     { type: 'doc', id: 'styling' },
     {
       type: 'category',

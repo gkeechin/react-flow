@@ -7,7 +7,7 @@ The control panel contains a zoom-in, zoom-out, fit-view and a lock/unlock butto
 
 ### Usage
 
-```javascript
+```jsx
 import ReactFlow, { Controls } from 'react-flow-renderer';
 
 const FlowWithControls = () => (
