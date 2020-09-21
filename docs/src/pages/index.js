@@ -58,8 +58,6 @@ function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
 
-  console.log(siteConfig);
-
   return (
     <Layout title={siteConfig.customFields.meta.title} description={siteConfig.customFields.meta.description}>
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
@@ -76,19 +74,7 @@ function Home() {
           </div>
         </div>
       </header>
-      <main>
-        {features && features.length > 0 && (
-          <section className={styles.features}>
-            <div className="container">
-              <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-      </main>
+      <main>getting started introduction</main>
     </Layout>
   );
 }

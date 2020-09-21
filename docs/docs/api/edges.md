@@ -73,7 +73,7 @@ There is an implementation of a custom edge in the [edges example](/example/src/
 
 There are several utils that help you to create a custom edge. They are used in the [custom edge](/example/src/Edges/CustomEdge.js) example.
 
-### getBezierPath
+### `getBezierPath`
 
 Returns the path of a bezier edge.
 
@@ -86,7 +86,7 @@ Returns the path of a bezier edge.
   targetPosition = Position.Top,
 }: GetBezierPathParams): string`
 
-### getSmoothStepPath
+### `getSmoothStepPath`
 
 Returns the path of a smooth step edge. You can set `borderRadius` = `0` to get a step edge path.
 
@@ -100,13 +100,13 @@ Returns the path of a smooth step edge. You can set `borderRadius` = `0` to get 
   borderRadius = 5,
 }: GetSmoothStepPathParams): string`
 
-### getEdgeCenter
+### `getEdgeCenter`
 
 Returns the center poostion `[centerX, centerY]` of the edge.
 
 `getEdgeCenter({ sourceX, sourceY, targetX, targetY }: GetCenterParams): [number, number, number, number]`
 
-### getMarkerEnd
+### `getMarkerEnd`
 
 Returns the marker end url for displaying the arrow head.
 

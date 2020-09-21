@@ -48,7 +48,7 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'test',
+          title: 'Documentation',
           items: [
             {
               label: 'API',
@@ -62,7 +62,7 @@ module.exports = {
         },
 
         {
-          title: 'More',
+          title: 'Contact',
           items: [
             {
               label: 'Twitter',
@@ -75,7 +75,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} React Flow. Built by webkid`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://webkid.io">webkid</a>`,
     },
   },
   plugins: [
