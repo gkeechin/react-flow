@@ -47,7 +47,7 @@ const offsets = [
 ];
 
 let id = 0;
-const getNodeId = () => (id++).toString();
+const getNodeId = () => `edgetypes-${(id++).toString()}`;
 
 export function getElements() {
   const initialElements = [];
@@ -95,7 +95,12 @@ export function getElements() {
         initialElements.push(sourceNode);
         initialElements.push(targetNode);
 
-        initialElements.push({ id: `${sourceId}-${targetId}`, source: sourceId, target: targetId, type: currEdgeType });
+        initialElements.push({
+          id: `${sourceId}-${targetId}`,
+          source: sourceId,
+          target: targetId,
+          type: currEdgeType,
+        });
       }
     }
   }

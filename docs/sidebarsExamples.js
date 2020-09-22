@@ -14,6 +14,6 @@ const examples = [
 module.exports = {
   examples: examples.map((ex) => ({
     type: 'doc',
-    id: `${ex}/${ex}`,
+    id: ex,
   })),
 };

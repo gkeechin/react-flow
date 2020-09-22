@@ -24,7 +24,7 @@ const CustomNodeFlow = () => {
     const onChange = (event) => {
       setElements((els) =>
         els.map((e) => {
-          if (isEdge(e) || e.id !== '2') {
+          if (isEdge(e) || e.id !== 'custom-2') {
             return e;
           }
 
@@ -44,20 +44,38 @@ const CustomNodeFlow = () => {
     };
 
     setElements([
-      { id: '1', type: 'input', data: { label: 'An input node' }, position: { x: 0, y: 50 }, sourcePosition: 'right' },
       {
-        id: '2',
+        id: 'custom-1',
+        type: 'input',
+        data: { label: 'An input node' },
+        position: { x: 0, y: 50 },
+        sourcePosition: 'right',
+      },
+      {
+        id: 'custom-2',
         type: 'selectorNode',
         data: { onChange: onChange, color: initBgColor },
         style: { border: '1px solid #777', padding: 10 },
         position: { x: 250, y: 50 },
       },
-      { id: '3', type: 'output', data: { label: 'Output A' }, position: { x: 550, y: 25 }, targetPosition: 'left' },
-      { id: '4', type: 'output', data: { label: 'Output B' }, position: { x: 550, y: 100 }, targetPosition: 'left' },
+      {
+        id: 'custom-3',
+        type: 'output',
+        data: { label: 'Output A' },
+        position: { x: 550, y: 25 },
+        targetPosition: 'left',
+      },
+      {
+        id: 'custom-4',
+        type: 'output',
+        data: { label: 'Output B' },
+        position: { x: 550, y: 100 },
+        targetPosition: 'left',
+      },
 
-      { id: 'e1-2', source: '1', target: '2', animated: true, style: { stroke: '#fff' } },
-      { id: 'e2a-3', source: '2__a', target: '3', animated: true, style: { stroke: '#fff' } },
-      { id: 'e2b-4', source: '2__b', target: '4', animated: true, style: { stroke: '#fff' } },
+      { id: 'custom-e1-2', source: 'custom-1', target: 'custom-2', animated: true, style: { stroke: '#fff' } },
+      { id: 'custom-e2a-3', source: 'custom-2__a', target: 'custom-3', animated: true, style: { stroke: '#fff' } },
+      { id: 'custom-e2b-4', source: 'custom-2__b', target: 'custom-4', animated: true, style: { stroke: '#fff' } },
     ]);
   }, []);
 

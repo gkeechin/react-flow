@@ -89,7 +89,6 @@ export interface ReactFlowProps extends Omit<HTMLAttributes<HTMLDivElement>, 'on
 }
 
 const ReactFlow = ({
-  style,
   onElementClick,
   elements = [],
   className,
@@ -141,13 +140,14 @@ const ReactFlow = ({
   onPaneClick,
   onPaneScroll,
   onPaneContextMenu,
+  ...rest
 }: ReactFlowProps) => {
-  const nodeTypesParsed = useMemo(() => createNodeTypes(nodeTypes), []);
-  const edgeTypesParsed = useMemo(() => createEdgeTypes(edgeTypes), []);
+  const nodeTypesParsed = useMemo(() => createNodeTypes(nodeTypes), [nodeTypes]);
+  const edgeTypesParsed = useMemo(() => createEdgeTypes(edgeTypes), [edgeTypes]);
   const reactFlowClasses = cc(['react-flow', className]);
 
   return (
-    <div style={style} className={reactFlowClasses}>
+    <div className={reactFlowClasses} {...rest}>
       <Wrapper>
         <GraphView
           onLoad={onLoad}

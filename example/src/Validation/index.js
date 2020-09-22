@@ -37,12 +37,14 @@ const nodeTypes = {
   customnode: CustomNode,
 };
 
-const HorizontalFlow = () => {
+const ValidationFlow = () => {
   const [elements, setElements] = useState(initialElements);
   const onConnect = (params) => {
     console.log('on connect', params);
     setElements((els) => addEdge(params, els));
   };
+
+  console.log('validation', elements, nodeTypes, location.href);
 
   return (
     <ReactFlow
@@ -55,8 +57,9 @@ const HorizontalFlow = () => {
       onConnectStart={onConnectStart}
       onConnectStop={onConnectStop}
       onConnectEnd={onConnectEnd}
+      key="validation"
     />
   );
 };
 
-export default HorizontalFlow;
+export default ValidationFlow;

@@ -9,12 +9,12 @@ const onElementClick = (event, element) => console.log('click', element);
 const onLoad = (reactFlowInstance) => console.log('flow loaded:', reactFlowInstance);
 
 const initialElements = [
-  { id: '1', type: 'input', data: { label: 'Node 1' }, position: { x: 250, y: 5 } },
-  { id: '2', data: { label: 'Node 2' }, position: { x: 100, y: 100 } },
-  { id: '3', data: { label: 'Node 3' }, position: { x: 400, y: 100 } },
-  { id: '4', data: { label: 'Node 4' }, position: { x: 400, y: 200 } },
-  { id: 'e1-2', source: '1', target: '2', animated: true },
-  { id: 'e1-3', source: '1', target: '3' },
+  { id: 'provider-1', type: 'input', data: { label: 'Node 1' }, position: { x: 250, y: 5 } },
+  { id: 'provider-2', data: { label: 'Node 2' }, position: { x: 100, y: 100 } },
+  { id: 'provider-3', data: { label: 'Node 3' }, position: { x: 400, y: 100 } },
+  { id: 'provider-4', data: { label: 'Node 4' }, position: { x: 400, y: 200 } },
+  { id: 'provider-e1-2', source: 'provider-1', target: 'provider-2', animated: true },
+  { id: 'provider-e1-3', source: 'provider-1', target: 'provider-3' },
 ];
 
 const ProviderFlow = () => {

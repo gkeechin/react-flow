@@ -8,15 +8,19 @@ export function getElements(xElements = 10, yElements = 10) {
       const position = { x: x * 100, y: y * 50 };
       const data = { label: `Node ${nodeId}` };
       const node = {
-        id: nodeId.toString(),
+        id: `stress-${nodeId.toString()}`,
         style: { width: 50, fontSize: 11 },
         data,
         position,
       };
       initialElements.push(node);
 
-      if (recentNodeId && nodeId <= (xElements * yElements)) {
-        initialElements.push({ id: `${x}-${y}`, source: recentNodeId.toString(), target: nodeId.toString() });
+      if (recentNodeId && nodeId <= xElements * yElements) {
+        initialElements.push({
+          id: `${x}-${y}`,
+          source: `stress-${recentNodeId.toString()}`,
+          target: `stress-${nodeId.toString()}`,
+        });
       }
 
       recentNodeId = nodeId;

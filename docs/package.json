@@ -15,9 +15,9 @@
     "@docusaurus/preset-classic": "2.0.0-alpha.64",
     "@mdx-js/react": "^1.5.8",
     "clsx": "^1.1.1",
-    "react": "^16.8.4",
+    "react": "file:../node_modules/react",
     "react-dom": "^16.8.4",
-    "react-flow-renderer": "^5.10.0"
+    "react-flow-renderer": "file:../"
   },
   "browserslist": {
     "production": [

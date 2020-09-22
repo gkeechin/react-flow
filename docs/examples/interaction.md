@@ -1,13 +1,11 @@
 ---
-id: overview
-title: Overview
-slug: /
+title: Interaction
 hide_title: true
 hide_table_of_contents: true
 custom_edit_url: false
 ---
 
-import Flow from './index';
+import Flow from '../../example/src/Interaction';
 
 <div style={{ height: '50vh' }}>
   <Flow />

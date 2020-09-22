@@ -3,7 +3,9 @@ import ReactFlow, { removeElements, addEdge, Background } from 'react-flow-rende
 
 import ConnectionLine from './ConnectionLine';
 
-const initialElements = [{ id: '1', type: 'input', data: { label: 'Node 1' }, position: { x: 250, y: 5 } }];
+const initialElements = [
+  { id: 'customconnection-1', type: 'input', data: { label: 'Node 1' }, position: { x: 250, y: 5 } },
+];
 
 const ConnectionLineFlow = () => {
   const [elements, setElements] = useState(initialElements);

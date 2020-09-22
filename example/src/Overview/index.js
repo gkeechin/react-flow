@@ -22,7 +22,7 @@ const onMoveEnd = (transform) => console.log('zoom/move end', transform);
 
 const initialElements = [
   {
-    id: '1',
+    id: 'overview-1',
     type: 'input',
     data: {
       label: (
@@ -34,7 +34,7 @@ const initialElements = [
     position: { x: 250, y: 0 },
   },
   {
-    id: '2',
+    id: 'overview-2',
     data: {
       label: (
         <>
@@ -45,7 +45,7 @@ const initialElements = [
     position: { x: 100, y: 100 },
   },
   {
-    id: '3',
+    id: 'overview-3',
     data: {
       label: (
         <>
@@ -57,7 +57,7 @@ const initialElements = [
     style: { background: '#eee', color: '#222', border: '1px solid #bbb', width: 180 },
   },
   {
-    id: '4',
+    id: 'overview-4',
     position: { x: 250, y: 200 },
     data: {
       label: (
@@ -71,7 +71,7 @@ const initialElements = [
     },
   },
   {
-    id: '5',
+    id: 'overview-5',
     data: {
       label: (
         <>
@@ -82,7 +82,7 @@ const initialElements = [
     position: { x: 250, y: 325 },
   },
   {
-    id: '6',
+    id: 'overview-6',
     type: 'output',
     data: {
       label: (
@@ -93,16 +93,22 @@ const initialElements = [
     },
     position: { x: 100, y: 480 },
   },
-  { id: '7', type: 'output', data: { label: 'Another output node' }, position: { x: 400, y: 450 } },
-  { id: 'e1-2', source: '1', target: '2', label: 'this is an edge label' },
-  { id: 'e1-3', source: '1', target: '3' },
-  { id: 'e3-4', source: '3', target: '4', animated: true, label: 'animated edge' },
-  { id: 'e4-5', source: '4', target: '5', arrowHeadType: 'arrowclosed', label: 'edge with arrow head' },
-  { id: 'e5-6', source: '5', target: '6', type: 'smoothstep', label: 'smooth step edge' },
+  { id: 'overview-7', type: 'output', data: { label: 'Another output node' }, position: { x: 400, y: 450 } },
+  { id: 'overview-e1-2', source: 'overview-1', target: 'overview-2', label: 'this is an edge label' },
+  { id: 'overview-e1-3', source: 'overview-1', target: 'overview-3' },
+  { id: 'overview-e3-4', source: 'overview-3', target: 'overview-4', animated: true, label: 'animated edge' },
   {
-    id: 'e5-7',
-    source: '5',
-    target: '7',
+    id: 'overview-e4-5',
+    source: 'overview-4',
+    target: 'overview-5',
+    arrowHeadType: 'arrowclosed',
+    label: 'edge with arrow head',
+  },
+  { id: 'overview-e5-6', source: 'overview-5', target: 'overview-6', type: 'smoothstep', label: 'smooth step edge' },
+  {
+    id: 'overview-e5-7',
+    source: 'overview-5',
+    target: 'overview-7',
     type: 'step',
     style: { stroke: '#f6ab6c' },
     label: 'a step edge',
