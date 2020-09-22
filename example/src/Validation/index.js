@@ -44,8 +44,6 @@ const ValidationFlow = () => {
     setElements((els) => addEdge(params, els));
   };
 
-  console.log('validation', elements, nodeTypes, location.href);
-
   return (
     <ReactFlow
       elements={elements}
